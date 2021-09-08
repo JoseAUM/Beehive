@@ -6,6 +6,8 @@ var routes = require("./routes");
 var server = express();
 
 server.set("port", process.env.PORT || 3000);
+server.set("views", path.join(__dirname, "views"));
+server.set("view engine", "ejs");
 
 server.use(routes);
 
